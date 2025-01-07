@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+     
+<Header>
+    <div class="title">
+    <p class="head">Outfit suggester</p>
+    <ul>
+          <li> <a href="{{'home'}}">Home</a></li>
+          <li> <a href="{{'about'}}">About us</a></li>
+          <li> <a href="{{'review'}}">Review</a></li>
+    </ul>
+</Header>
+
+   <!-- FORM -->
+
+   <main>
+    <div class="forms"> <br><br>
+        <h1>REVIEW US</h1>
+        <form>
+            <!-- Personal Information Section -->
+            <fieldset>
+                <legend class="info">Personal Information</legend>
+                
+                <!-- Name -->
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your Fullname.." required><br><br>
+                
+                <!-- Phone number -->
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" placeholder="Enter your contact No. here..." readonly><br><br>
+                
+                <!-- Email -->
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your Email here..." readonly><br><br>
+            </fieldset>
+            
+            <!-- Gender Selection -->
+            <fieldset class="gender">
+                <legend>Gender</legend>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="M">
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="F"><br><br>
+            </fieldset>
+
+            <!-- Services Section -->
+            <fieldset class="experience">
+                <legend>Your Experience</legend>
+                <label>How would you describe your experience from the given below:</label><br>
+                <input type="radio" id="5" value="5 star">
+                <label for="5">Loved it!</label><br>
+                <input type="radio" id="4" value="4 star">
+                <label for="4">Very Helpful!</label><br>
+                <input type="radio" id="3" value="3 star">
+                <label for="3">Good but not worth it</label><br>
+                <input type="radio" id="2" value="2 star">
+                <label for="2">Somewhat helpful</label><br>  
+                <input type="radio" id="1" value="1 star">
+                <label for="1">Not Satisfied/helpful</label><br>
+                
+            </fieldset>
+
+            <!-- Address Section -->
+            <label for="address">Message</label><br>
+            <textarea id="address" name="address" rows="6" cols="50" placeholder="Anything else you would like us to add?"></textarea><br><br>
+            
+            <!-- Action Buttons -->
+             <div class="Buttons">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset" onclick="resetForm()">
+             </div>
+        </form>
+    </div>
+
+   <!-- FOOTER  -->
+
+   <footer>
+    <h4>© 2024 All rights reserved.</h4>
+</footer>
+    
+</body>
+</html>
